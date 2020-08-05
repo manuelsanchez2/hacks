@@ -1,0 +1,58 @@
+/* Create animations with CSS
+1. animation property on the element to be animated
+2. @keyframes with the name of the animation */
+
+.startButton {
+    height: 20vh;
+    width: 35vw;
+    opacity: 1;
+    animation: 4s ease-in deathDance;
+}
+
+@keyframes deathDance {
+
+    0% {
+        margin-left: 99%;
+        opacity: 1;
+        -webkit-transform: rotate(0deg);
+        width: 35vw;
+        height: 20vh;
+    } 
+    70% {
+        opacity: 1;
+        -webkit-transform: rotate(240deg);
+
+    }
+    100%{
+        margin-left: 1%;
+        opacity: 0;
+        -webkit-transform: rotate(360deg);
+        width: 12vw;
+        height: 7vh;
+    }
+}
+
+/* Create CSS variables
+
+1. Write the name of the variable with the convention established in an upper container. 
+2. Write the variable inside var() in the property you want to change. */
+
+:root {
+    --main-bg-color: #000;
+    --main-font-color: #fff;
+    --scnd-bg-color: red;
+    --scnd-font-color: #000;
+    --border-style: dashed;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
+    margin-left: 10px;
+}
+
+.toggle {
+    border: 5px var(--border-style) var(--main-font-color);
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
+}
